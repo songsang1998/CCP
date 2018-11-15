@@ -1,12 +1,8 @@
 #include "item.h"
 
 
-
-item::item()
-{
-}
+class item{
 
 
-item::~item()
-{
-}
+	
+};

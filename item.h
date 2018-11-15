@@ -3,9 +3,10 @@
 #define ITEM_H
 class item
 {
+	numbmer;
 public:
 	item();
-	~item();
+	
 };
 #endif
 
