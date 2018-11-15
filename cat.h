@@ -1,11 +1,21 @@
 #pragma once
 #ifndef CAT_H
 #define CAT_H
-class cat
+#include <string>
+#include <iostream>
+using namespace std;
+
+class Cat
 {
 public:
-	cat();
-	~cat();
+
+	string name;
+	int Birth_year;
+	bool disease;
+	string species;
+	int Gender;
+	Cat(string n, int B, bool d, string s, int G);
+	void getdisease();
 };
 #endif
 
