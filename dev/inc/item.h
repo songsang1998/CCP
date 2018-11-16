@@ -1,6 +1,7 @@
 #pragma once
 #ifndef ITEM_H
 #define ITEM_H
+
 class item
 {
 	int number=0;

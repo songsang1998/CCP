@@ -10,9 +10,13 @@ Cat::Cat(string n, int b, char d, string s, char g) {
 	name = n;
 	disease = d;
 }
-	void Cat::getdisease(char d) {
+void Cat::getdisease(char d) {
 
-		disease = d;
+	disease = d;
 
-	}
+}
+
+
+
+
 

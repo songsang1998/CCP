@@ -14,7 +14,7 @@ public:
 	bool disease;
 	string species;
 	int Gender;
-	Cat(string n,int b, char d, string s, char g);
+	Cat(string n, int b, char d, string s, char g);
 	void getdisease(char d);
 };
 #endif

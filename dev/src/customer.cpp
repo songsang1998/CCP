@@ -1,18 +1,18 @@
 #include "customer.h"
 
-
-int admission_fee(int &r) {
+int admission_fee(item &c) {
+	
 	return 0;
 }
-int coffee(int &r) {
+int coffee(item &r) {
 	return 0;
 }
-int catfood(int &r) {
+int catfood(item &r) {
 	return 0;
 }
-bool customer_Interface(int c) {
+bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_bean, foodstuff&caramel, foodstuff&milk, foodstuff&lemon, foodstuff&chco, foodstuff&peach) {
 	bool lp2 = true;
-	int fee = 0;
+	
 	char a = 0;
 	int pass;
 	while (lp2) {
@@ -21,17 +21,17 @@ bool customer_Interface(int c) {
 		cin >> a;
 		switch (a) {
 		case '1':
-			if (admission_fee(fee) == 1) {
+			if (admission_fee(money) == 1) {
 				lp2 = false;
 			}
 			break;
 		case '2':
-			if (coffee(fee) == 1) {
+			if (coffee(money) == 1) {
 				lp2 = false;
 			}
 			break;
 		case '3':
-			if (coffee(fee) == 1) {
+			if (coffee(money) == 1) {
 				lp2 = false;
 			}
 			break;

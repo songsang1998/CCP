@@ -16,7 +16,7 @@ int Password_Setting(int &d) {
 	cin >> i;
 
 	d = i;
-
+	
 
 	bool t = true;
 
@@ -76,14 +76,14 @@ int Cat_Management() {
 
 	string n; int B; char d; string s; char G;
 	int w = Q.size();
-		for (int r=0; r < w; r++) {
-			cout<<"cat. " << r + 1 <<endl << "name : " << Q.front().name << endl << "Birth_year : " << Q.front().Birth_year << endl << "species : " << Q.front().species << endl << "Gender : " << Q.front().Gender << endl << "disease : " << Q.front().disease << endl << endl;
-			temp.push(Q.front()); Q.pop();
-		}
-		int e = temp.size();
-		for (int r = 0; r < e; r++) {
-			Q.push(temp.front()); temp.pop();
-		}
+	for (int r = 0; r < w; r++) {
+		cout << "cat. " << r + 1 << endl << "name : " << Q.front().name << endl << "Birth_year : " << Q.front().Birth_year << endl << "species : " << Q.front().species << endl << "Gender : " << Q.front().Gender << endl << "disease : " << Q.front().disease << endl << endl;
+		temp.push(Q.front()); Q.pop();
+	}
+	int e = temp.size();
+	for (int r = 0; r < e; r++) {
+		Q.push(temp.front()); temp.pop();
+	}
 	cout << "1.Add a cat" << endl << "2.Delete a cat" << endl << "3.change cat's condition" << endl;
 	char a;
 	cin >> a;
@@ -122,7 +122,7 @@ int Cat_Management() {
 	break;
 
 	case '2':
-	{int g = 0; 
+	{int g = 0;
 	w = Q.size();
 	for (int r = 0; r < w; r++) {
 		cout << "cat. " << r + 1 << endl << "name : " << Q.front().name << endl << "Birth_year : " << Q.front().Birth_year
@@ -147,7 +147,7 @@ int Cat_Management() {
 			Q.pop();
 		}
 		else {
-			cout  << "cat. " << r  << endl << "name : " << Q.front().name << endl << "Birth_year : " << Q.front().Birth_year
+			cout << "cat. " << r << endl << "name : " << Q.front().name << endl << "Birth_year : " << Q.front().Birth_year
 				<< endl << "species : " << Q.front().species << endl << "Gender : " << Q.front().Gender << endl << "disease : " << Q.front().disease << endl << endl;
 			temp.push(Q.front()); Q.pop();
 		}
@@ -157,33 +157,33 @@ int Cat_Management() {
 		Q.push(temp.front()); temp.pop();
 	}
 
-		bool t = true;
+	bool t = true;
 
-		while (t) {
-			cout << "do you want to manage more?" << endl << "1.yes" << "2.no" << endl;
-			cin.clear();
-			cin.ignore(100, '\n');
-			int b = 0;
-			cin >> b;
-			if (b == 1) {
-				return 0;
-
-			}
-			else if (b == 2) {
-				return 1;
-
-			}
-			else {
-				
-				cout << "try again";
-			}
+	while (t) {
+		cout << "do you want to manage more?" << endl << "1.yes" << "2.no" << endl;
+		cin.clear();
+		cin.ignore(100, '\n');
+		int b = 0;
+		cin >> b;
+		if (b == 1) {
+			return 0;
 
 		}
+		else if (b == 2) {
+			return 1;
+
 		}
-		break;
+		else {
+
+			cout << "try again";
+		}
+
+	}
+	}
+	break;
 	case '3':
 	{int g = 0;
-		cout << "Please enter the number of the cat to delete";
+	cout << "Please enter the number of the cat to delete";
 
 	cin >> g;
 	g--;
@@ -194,7 +194,7 @@ int Cat_Management() {
 		if (r < g) {
 			temp.push(Q.front()); Q.pop();
 		}
-		else if (r == g && l=='o') {
+		else if (r == g && l == 'o') {
 
 			Q.front().getdisease('o');
 
@@ -205,7 +205,7 @@ int Cat_Management() {
 
 		}
 		else {
-				
+
 			temp.push(Q.front()); Q.pop();
 		}
 	}
@@ -223,36 +223,36 @@ int Cat_Management() {
 
 
 
-		bool t = true;
+	bool t = true;
 
-		while (t) {
-			cout << "do you want to manage more?" << endl << "1.yes" << "2.no" << endl;
-			cin.clear();
-			cin.ignore(100, '\n');
-			int b = 0;
-			cin >> b;
-			if (b == 1) {
-				return 0;
-
-			}
-			else if (b == 2) {
-				return 1;
-
-			}
-			else {
-
-				cout << "try again";
-			}
+	while (t) {
+		cout << "do you want to manage more?" << endl << "1.yes" << "2.no" << endl;
+		cin.clear();
+		cin.ignore(100, '\n');
+		int b = 0;
+		cin >> b;
+		if (b == 1) {
+			return 0;
 
 		}
+		else if (b == 2) {
+			return 1;
+
+		}
+		else {
+
+			cout << "try again";
 		}
 
-		break;
+	}
+	}
+
+	break;
 	}
 }
 
 
-bool manager_Interface(int &c) {
+bool manager_Interface(int &c, item &money, foodstuff &water, foodstuff&coffee_bean, foodstuff&caramel, foodstuff&milk, foodstuff&lemon, foodstuff&chco, foodstuff&peach) {
 	while (1)
 	{
 		cout << "Welcome to Manager Mode." << endl << "Please select one of the numbers." << endl;

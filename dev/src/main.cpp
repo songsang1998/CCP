@@ -35,10 +35,10 @@ int main() {
 
 		
 		if (guest == true) {
-			guest = customer_Interface(password);
+			guest = customer_Interface(password,money,water,Coffee_Bean,Caramel,milk,lemon,Chocolate,peach);
 		}
 		else {
-			guest = manager_Interface(password);
+			guest = manager_Interface(password, money, water,Coffee_Bean, Caramel, milk, lemon, Chocolate, peach);
 		}
 	}
 }
