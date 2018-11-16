@@ -20,12 +20,11 @@ int Cafe_Management() {
 int Cat_Management() {
 
 
-	string n; int B; bool d; string s; int G;
-	if (q > 1) {
-		for (i = 0; i < q; i++) {
-			cout << "name : " << p[i].name << endl << "Birth_year : " << p[i].Birth_year << endl << "species : " << p[i].species << endl << "Gender : " << p[i].Gender << endl << "disease : " << p[i].disease << endl;
+	string n; int B; int d; string s; int G;
+		for (int r=0; r < q-1; r++) {
+			cout << "name : " << p[r].name << endl << "Birth_year : " << p[r].Birth_year << endl << "species : " << p[r].species << endl << "Gender : " << p[r].Gender << endl << "disease : " << p[r].disease << endl;
 		}
-	}
+	
 	cout << "1.Add a cat" << endl << "2.Delete a cat" << endl << "3.change cat's condition" << endl;
 	char a;
 	cin >> a;
@@ -45,19 +44,24 @@ int Cat_Management() {
 
 	bool t = true;
 
-	cin.clear();
-	int b;
-	cin >> b;
+	while (t) {
 	cout << "do you want to manage more?" << endl << "1.yes" << "2.no" << endl;
-
+	cin.clear();
+	cin.ignore(100,'\n');
+	int b=0;
+cin >> b;
 	if (b == 1) {
 		return 0;
+		
 	}
 	else if (b == 2) {
 		return 1;
+		
 	}
 	else {
+		
 		cout << "try again";
+	}
 	}
 	}
 
