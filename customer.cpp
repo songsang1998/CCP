@@ -2,22 +2,22 @@
 
 
 int admission_fee(int &r) {
-		return 0;
+	return 0;
 }
 int coffee(int &r) {
-		return 0; 
+	return 0;
 }
 int catfood(int &r) {
-		return 0; 
+	return 0;
 }
-bool customer_Interface(string &c) {
+bool customer_Interface(int c) {
 	bool lp2 = true;
 	int fee = 0;
 	char a = 0;
-	string pass;
+	int pass;
 	while (lp2) {
-		cout << "Hellow, welcome to cat cafe." << endl << "Please select one of the following numbers. << endl;
-		cout << "1.Admission Fees " << endl << "2.coffee" << endl << "3.cat item" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl <<"*. manager mode";
+		cout << "Hellow, welcome to cat cafe." << endl << "Please select one of the following numbers." << endl;
+		cout << "1.Admission Fees " << endl << "2.coffee" << endl << "3.cat item" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << "*. manager mode";
 		cin >> a;
 		switch (a) {
 		case '1':
@@ -37,18 +37,21 @@ bool customer_Interface(string &c) {
 			break;
 		case '#':
 		case '*':
-			getline(cin, pass);
+			cout << "press your password!";
+			cin >> pass;
 			if (c == pass) {
-				return true;
+				return false;
 			}
-			else
-				break;
-			
+			else {
+				cout << "Incorrect password.";
+			}
+			break;
+
 
 		default:
 			cout << "Please re-enter";
 		}
-		
+
 	}
 	return false;
 }
