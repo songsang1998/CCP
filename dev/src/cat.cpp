@@ -3,30 +3,23 @@
 
 
 
-Cat::Cat() {
-
-}
-
-void Cat::setbirth(int b) {
+Cat::Cat(string n, int b, int d, string s, int g) {
 	Birth_year = b;
-}
-void Cat::setdisease(bool d) {
-	disease = d;
-}
-void Cat::setspecies(string s) {
 	species = s;
-}
-void Cat::setGender(int g) {
 	Gender = g;
+	name = n;
+	if (d == 1) {
+		disease = true;
+	}else { disease = false; }
 }
 
-void Cat::setname(string n)
+void Cat::getdisease(int d)
 {
-	name = n;
-}
-void Cat::getdisease()
-{
-	cin >> disease;
+	if (d == 1) {
+		disease = true;
+	}
+	else { disease = false; }
+
 }
 
 

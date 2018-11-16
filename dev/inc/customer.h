@@ -3,7 +3,6 @@
 #define CUSTOMER_H
 #include <iostream>
 #include <string>
-
 using namespace std;
-bool customer_Interface(string &c);
+bool customer_Interface(int c);
 #endif
