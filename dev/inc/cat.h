@@ -13,7 +13,7 @@ public:
 	int Birth_year;
 	bool disease;
 	string species;
-	int Gender;
+	char Gender;
 	Cat(string n, int b, char d, string s, char g);
 	void getdisease(char d);
 };

@@ -3,6 +3,7 @@
 #include <string>
 #include <queue>
 #include "cat.h"
+#include <ctime>
 using namespace std;
 queue<Cat>Q;
 
@@ -73,11 +74,13 @@ int Cafe_Management() {
 
 int Cat_Management() {
 
+	std::time_t t = std::time(0);
+	std::tm* now = std::localtime(&t);
 
 	string n; int B; char d; string s; char G;
 	int w = Q.size();
 	for (int r = 0; r < w; r++) {
-		cout << "cat. " << r + 1 << endl << "name : " << Q.front().name << endl << "Birth_year : " << Q.front().Birth_year << endl << "species : " << Q.front().species << endl << "Gender : " << Q.front().Gender << endl << "disease : " << Q.front().disease << endl << endl;
+		cout << "cat. " << r + 1 << endl << "name : " << Q.front().name << endl << "age : " << now->tm_year + 1900+1 - Q.front().Birth_year << endl << "species : " << Q.front().species << endl << "Gender : " << Q.front().Gender << endl << "disease : " << Q.front().disease << endl << endl;
 		temp.push(Q.front()); Q.pop();
 	}
 	int e = temp.size();
@@ -125,7 +128,7 @@ int Cat_Management() {
 	{int g = 0;
 	w = Q.size();
 	for (int r = 0; r < w; r++) {
-		cout << "cat. " << r + 1 << endl << "name : " << Q.front().name << endl << "Birth_year : " << Q.front().Birth_year
+		cout << "cat. " << r + 1 << endl << "name : " << Q.front().name << endl << "age : " << now->tm_year + 1900+1 - Q.front().Birth_year 
 			<< endl << "species : " << Q.front().species << endl << "Gender : " << Q.front().Gender << endl << "disease : " << Q.front().disease << endl << endl;
 		temp.push(Q.front()); Q.pop();
 	}
@@ -139,7 +142,7 @@ int Cat_Management() {
 	g--;
 	for (int r = 0; r < w; r++) {
 		if (r < g) {
-			cout << "cat. " << r + 1 << endl << "name : " << Q.front().name << endl << "Birth_year : " << Q.front().Birth_year
+			cout << "cat. " << r + 1 << endl << "name : " << Q.front().name << endl << "age : " << now->tm_year + 1900+1 - Q.front().Birth_year 
 				<< endl << "species : " << Q.front().species << endl << "Gender : " << Q.front().Gender << endl << "disease : " << Q.front().disease << endl << endl;
 			temp.push(Q.front()); Q.pop();
 		}
@@ -147,8 +150,7 @@ int Cat_Management() {
 			Q.pop();
 		}
 		else {
-			cout << "cat. " << r << endl << "name : " << Q.front().name << endl << "Birth_year : " << Q.front().Birth_year
-				<< endl << "species : " << Q.front().species << endl << "Gender : " << Q.front().Gender << endl << "disease : " << Q.front().disease << endl << endl;
+			cout << "cat. " << r << endl << "name : " << Q.front().name << endl << "age : " << now->tm_year + 1900+1 - Q.front().Birth_year 			<< endl << "species : " << Q.front().species << endl << "Gender : " << Q.front().Gender << endl << "disease : " << Q.front().disease << endl << endl;
 			temp.push(Q.front()); Q.pop();
 		}
 	}
