@@ -1,8 +1,8 @@
-
-Americano : water3 + Coffee Bean1 3500
-Espresso : water1 + Coffee Bean 1 3500
-caramel macchiato: Caramel1 + Coffee Bean1 + water1+ milk2 4000
-Hot chocolate:  Chocolate1 + water 1 + milk2 3000
-Lemon ice tea: lemon1 + water3  2500
-peach ice tea: peach1 + water3 2500
+ 
+Americano : water3 + Coffee_Bean1 3500 450
+Espresso : water1 + Coffee Bean 1 3500 350
+caramel macchiato: Caramel1 + Coffee Bean1 + water1+ milk2 4000 650
+Hot chocolate:  Chocolate1 + water 1 + milk2 3000 350
+Lemon ice tea: lemon1 + water3  2500 200
+peach ice tea: peach1 + water3 2500 200
 Random 

@@ -3,9 +3,9 @@
 #define ITEM_H
 class item
 {
-	int number;
+	int number=0;
 public:
-	
+	void set(int a);
 	void increase(int a);
 	void decrease(int a);
 
