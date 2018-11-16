@@ -3,10 +3,13 @@
 #define ITEM_H
 class item
 {
-	numbmer;
+	int number;
 public:
-	item();
 	
+	void increase(int a);
+	void decrease(int a);
+
+
 };
 #endif
 
