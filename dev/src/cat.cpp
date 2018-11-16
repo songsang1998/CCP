@@ -3,24 +3,16 @@
 
 
 
-Cat::Cat(string n, int b, int d, string s, int g) {
+Cat::Cat(string n, int b, char d, string s, char g) {
 	Birth_year = b;
 	species = s;
 	Gender = g;
 	name = n;
-	if (d == 1) {
-		disease = true;
-	}else { disease = false; }
+	disease = d;
 }
+	void Cat::getdisease(char d) {
 
-void Cat::getdisease(int d)
-{
-	if (d == 1) {
-		disease = true;
+		disease = d;
+
 	}
-	else { disease = false; }
-
-}
-
-
 

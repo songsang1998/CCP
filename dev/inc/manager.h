@@ -4,5 +4,5 @@
 #include <iostream>
 #include <string>
 using namespace std;
-bool manager_Interface(int c);
+bool manager_Interface(int &c);
 #endif

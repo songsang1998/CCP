@@ -10,23 +10,19 @@
 
 using namespace std;
 
-int password = 1234;
-
-
-
 
 int main() {
 
 	bool lp1 = true;
 	bool guest = true;
-
+	int password = 1234;
 
 
 
 
 	while (lp1) {
 
-
+		
 		if (guest == true) {
 			guest = customer_Interface(password);
 		}
