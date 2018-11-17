@@ -15,8 +15,3 @@ void Cat::getdisease(char d) {
 	disease = d;
 
 }
-
-
-
-
-

@@ -2,15 +2,18 @@
 #ifndef ITEM_H
 #define ITEM_H
 
-class item
+class item	
 {
-	int number=0;
+	
+protected:
+	int number = 0;
+	
 public:
 	void set(int a);
 	void increase(int a);
 	void decrease(int a);
-
-
+	void printitem();
+	int getnumber();
 };
 #endif
 

@@ -2,11 +2,11 @@
 #ifndef FOODSTUFF_H
 #define FOODSTUFF_H
 #include "item.h"
-class foodstuff: public item{
+class foodstuff : public item {
 	int pay;
 public:
-	foodstuff(int a);
-	
+	foodstuff(int a, int b);
+	int getpay();
 
 };
 #endif
