@@ -12,6 +12,7 @@ queue<Cat>temp;
 
 int Password_Setting(int &d) {
 	int i;
+	system("cls");
 	cout << "Input new password";
 
 	cin >> i;
@@ -28,28 +29,32 @@ int Password_Setting(int &d) {
 		int b = 0;
 		cin >> b;
 		if (b == 1) {
+
+			system("cls");
 			return 0;
 
 		}
 		else if (b == 2) {
+
+			system("cls");
 			return 1;
 
 		}
 		else {
 
-			cout << "try again"<<endl;
+			cout << "try again" << endl;
 		}
 	}
 	return 0;
 }
-int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodstuff&caramel, foodstuff&milk, foodstuff&lemon, foodstuff&chco, foodstuff&peach,foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly, foodstuff &ShivaCans) {
+int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodstuff&caramel, foodstuff&milk, foodstuff&lemon, foodstuff&chco, foodstuff&peach, foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly, foodstuff &ShivaCans) {
 
 
 
 	cout << "1.item print&Buy " << endl << "2.money print" << endl;
 	char a;
 	cin >> a;
-	while(1)
+	while (1)
 		if (a == '1') {
 			cout << "--------------item print--------------" << endl;
 			cout << "1. water: ";
@@ -74,31 +79,33 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 			GreeniesPhilly.printitem();
 			cout << "11.ShivaCans: ";
 			ShivaCans.printitem();
-			cout << "12. exit"<<endl<<endl;
+			cout << "12. exit" << endl << endl;
 			int Buy;
 			cin >> Buy;
 			int numbuy = 0;
 			int sumBuy = 0;
 			switch (Buy) {
 			case 1:
-				cout<<endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
-				sumBuy=water.getpay()*numbuy;
+				sumBuy = water.getpay()*numbuy;
 				if (money.getnumber() > sumBuy) {
 					money.decrease(sumBuy);
 					water.increase(numbuy);
-					cout << "Price"<<sumBuy<<endl;
+					cout << "Price" << sumBuy << endl;
 				}
 				else {
 					cout << " There is not enough money. " << endl;
 				}
 				break;
 			case 2:
-				cout << endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
-				sumBuy= coffee_bean.getpay()*numbuy;
+				sumBuy = coffee_bean.getpay()*numbuy;
 				if (money.getnumber() > sumBuy) {
 					money.decrease(sumBuy);
 					coffee_bean.increase(numbuy);
@@ -109,7 +116,8 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 				}
 				break;
 			case 3:
-				cout << endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
 				sumBuy = caramel.getpay()*numbuy;
@@ -123,11 +131,12 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 				}
 				break;
 			case 4:
-				cout << endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
 				sumBuy = milk.getpay()*numbuy;
-				if (money.getnumber() > sumBuy){
+				if (money.getnumber() > sumBuy) {
 					money.decrease(sumBuy);
 					milk.increase(numbuy);
 					cout << "Price" << sumBuy << endl;
@@ -137,10 +146,11 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 				}
 				break;
 			case 5:
-				cout << endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
-				 sumBuy = lemon.getpay()*numbuy;
+				sumBuy = lemon.getpay()*numbuy;
 				if (money.getnumber() > sumBuy) {
 					money.decrease(sumBuy);
 					lemon.increase(numbuy);
@@ -151,7 +161,8 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 				}
 				break;
 			case 6:
-				cout << endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
 				sumBuy = chco.getpay()*numbuy;
@@ -165,7 +176,8 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 				}
 				break;
 			case 7:
-				cout << endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
 				sumBuy = peach.getpay()*numbuy;
@@ -179,10 +191,11 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 				}
 				break;
 			case 8:
-				cout << endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
-				 sumBuy = Chaotour.getpay()*numbuy;
+				sumBuy = Chaotour.getpay()*numbuy;
 				if (money.getnumber() > sumBuy) {
 					money.decrease(sumBuy);
 					Chaotour.increase(numbuy);
@@ -193,7 +206,8 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 				}
 				break;
 			case 9:
-				cout << endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
 				sumBuy = Catstick.getpay()*numbuy;
@@ -207,7 +221,8 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 				}
 				break;
 			case 10:
-				cout << endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
 				sumBuy = GreeniesPhilly.getpay()*numbuy;
@@ -221,10 +236,11 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 				}
 				break;
 			case 11:
-				cout << endl << endl << endl << endl << endl;
+
+				system("cls");
 				cout << "How many would you like to buy?";
 				cin >> numbuy;
-				 sumBuy = ShivaCans.getpay()*numbuy;
+				sumBuy = ShivaCans.getpay()*numbuy;
 				if (money.getnumber() > sumBuy) {
 					money.decrease(sumBuy);
 					ShivaCans.increase(numbuy);
@@ -234,24 +250,35 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 					cout << " There is not enough money. " << endl;
 				}
 				break;
-			case 12: 
+			case 12:
 				break;
 			default:
 				cout << "Please re-enter" << endl;
+				int enter;
+				cin >> enter;
+				system("cls");
 				break;
 			}
 			if (Buy == 12) {
 				break;
 			}
 		}
-	else if (a=='2') {
-		cout << "your money:";
-		money.printitem();
-		break;
-	}
-	else {
-		cout << "try again"<<endl;
-	}
+		else if (a == '2') {
+			cout << "your money:";
+			money.printitem();
+			break;
+		}
+		else {
+			cout << "try again" << endl;
+			int enter;
+			cin.clear();
+			cin.ignore(100, '\n');
+			cin >> enter;
+
+			system("cls");
+			return 0;
+
+		}
 
 
 	while (1) {
@@ -261,16 +288,20 @@ int Cafe_Management(item &money, foodstuff &water, foodstuff&coffee_bean, foodst
 		int b = 0;
 		cin >> b;
 		if (b == 1) {
+
+			system("cls");
 			return 0;
 
 		}
 		else if (b == 2) {
+
+			system("cls");
 			return 1;
 
 		}
 		else {
 
-			cout << "try again"<<endl;
+			cout << "try again" << endl;
 		}
 	}
 	return 0;
@@ -312,16 +343,20 @@ int Cat_Management() {
 		int b = 0;
 		cin >> b;
 		if (b == 1) {
+
+			system("cls");
 			return 0;
 
 		}
 		else if (b == 2) {
+
+			system("cls");
 			return 1;
 
 		}
 		else {
 
-			cout << "try again"<< endl;
+			cout << "try again" << endl;
 		}
 	}
 	}
@@ -372,10 +407,13 @@ int Cat_Management() {
 		int b = 0;
 		cin >> b;
 		if (b == 1) {
+
+			system("cls");
 			return 0;
 
 		}
 		else if (b == 2) {
+			system("cls");
 			return 1;
 
 		}
@@ -389,11 +427,11 @@ int Cat_Management() {
 	break;
 	case '3':
 	{int g = 0;
-	cout << "Please enter the number of the cat to delete";
+	cout << "Please enter the number of the cat to change state" << endl;
 
 	cin >> g;
 	g--;
-	cout << "Please enter the state(o or x)";
+	cout << "Please enter the state(o or x)" << endl;
 	char l;
 	cin >> l;
 	for (int r = 0; r < w; r++) {
@@ -438,10 +476,12 @@ int Cat_Management() {
 		int b = 0;
 		cin >> b;
 		if (b == 1) {
+			system("cls");
 			return 0;
 
 		}
 		else if (b == 2) {
+			system("cls");
 			return 1;
 
 		}
@@ -468,16 +508,20 @@ bool manager_Interface(int &c, item &money, foodstuff &water, foodstuff&coffee_b
 		switch (b) {
 		case '1':
 			if (Password_Setting(c) == 1) {
+
+				system("cls");
 				return true;
 			}
 			break;
 		case '2':
-			if (Cafe_Management(money,water,coffee_bean,caramel,milk, lemon,chco, peach, Chaotour, Catstick, GreeniesPhilly, ShivaCans) == 1) {
+			if (Cafe_Management(money, water, coffee_bean, caramel, milk, lemon, chco, peach, Chaotour, Catstick, GreeniesPhilly, ShivaCans) == 1) {
+				system("cls");
 				return true;
 			}
 			break;
 		case '3':
 			if (Cat_Management() == 1) {
+				system("cls");
 				return true;
 			}
 

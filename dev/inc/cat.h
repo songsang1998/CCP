@@ -11,7 +11,7 @@ public:
 
 	string name;
 	int Birth_year;
-	bool disease;
+	char disease;
 	string species;
 	char Gender;
 	Cat(string n, int b, char d, string s, char g);

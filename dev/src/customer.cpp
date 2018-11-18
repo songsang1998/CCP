@@ -1,5 +1,7 @@
 #include "customer.h"
+#include <stdlib.h>
 
+string enter;
 int admission_fee() {
 	int r;
 	cout << "How many people are there?" << endl;
@@ -21,6 +23,7 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 		int max[6];
 		char coffech;
 		cin >> coffech;
+		system("cls");
 		switch (coffech) {
 		case '1':
 			if (water.getnumber() >= 3 && coffee_bean.getnumber() >= 1) {
@@ -29,11 +32,13 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 					int ch21;
 					cin >> ch21;
 					if (ch21 == 1) {
-						cout << "Hot American choice" << endl << endl;
+						cout << "Hot Americano choice" << endl << endl;
+
 						break;
 					}
 					else if (ch21 == 2) {
-						cout << "Cool American choice" << endl << endl;
+						cout << "Cool Americano choice" << endl << endl;
+
 						break;
 					}
 					else {
@@ -43,13 +48,13 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 
 				}
 				while (1) {
-					int max1 = (water.getnumber() / 3) < (coffee_bean.getnumber()) ? (water.getnumber()/3) : coffee_bean.getnumber();
+					int max1 = (water.getnumber() / 3) < (coffee_bean.getnumber()) ? (water.getnumber() / 3) : coffee_bean.getnumber();
 					cout << "How many would you like to buy? max:" << max1 << endl << endl;
 					int many21;
 					cin >> many21;
 					if (many21 <= max1) {
 						water.decrease(3 * many21);
-						coffee_bean.decrease( many21);
+						coffee_bean.decrease(many21);
 						return (many21 * 3500);
 					}
 					else {
@@ -61,7 +66,7 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 				cout << "Sorry I don't have enough foodstuff." << endl << endl;
 				return -1;
 			}
-		
+
 		case '2':
 			if (water.getnumber() >= 1 && coffee_bean.getnumber() >= 1) {
 				while (1) {
@@ -70,10 +75,12 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 					cin >> ch22;
 					if (ch22 == 1) {
 						cout << "Hot Espresso choice" << endl << endl;
+
 						break;
 					}
 					else if (ch22 == 2) {
 						cout << "Cool Espresso choice" << endl << endl;
+
 						break;
 					}
 					else {
@@ -101,7 +108,7 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 				cout << "Sorry I don't have enough foodstuff." << endl << endl;
 				return -1;
 			}
-			
+
 		case '3':
 			if (caramel.getnumber() >= 1 && coffee_bean.getnumber() >= 1 && water.getnumber() >= 1 && milk.getnumber() >= 2) {
 				while (1) {
@@ -125,9 +132,9 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 				while (1) {
 					int max3;
 					int small1 = caramel.getnumber() < coffee_bean.getnumber() ? caramel.getnumber() : coffee_bean.getnumber();
-					int small2 = water.getnumber() < (milk.getnumber()/2) ? water.getnumber() : (milk.getnumber()/2);
+					int small2 = water.getnumber() < (milk.getnumber() / 2) ? water.getnumber() : (milk.getnumber() / 2);
 					max3 = small1 < small2 ? small1 : small2;
-					
+
 					cout << "How many would you like to buy? max:" << max3 << endl << endl;
 					int many23;
 					cin >> many23;
@@ -135,7 +142,7 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 						water.decrease(many23);
 						coffee_bean.decrease(many23);
 						caramel.decrease(many23);
-						milk.decrease(2 *many23);
+						milk.decrease(2 * many23);
 						return (many23 * 4000);
 					}
 					else {
@@ -147,60 +154,60 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 				cout << "Sorry I don't have enough foodstuff." << endl << endl;
 				return -1;
 			}
-			
+
 		case '4':
 			if (water.getnumber() >= 1 && chco.getnumber() >= 1 && milk.getnumber() >= 2) {
-			cout << "Hot chocolate choice" << endl << endl;
-			while (1) {
-				int max4;
-				int small3 = water.getnumber() < chco.getnumber() ? water.getnumber() : chco.getnumber();
-				if(small3<(milk.getnumber()/2))
-				{
-					max4 = small3;
+				cout << "Hot chocolate choice" << endl << endl;
+				while (1) {
+					int max4;
+					int small3 = water.getnumber() < chco.getnumber() ? water.getnumber() : chco.getnumber();
+					if (small3 < (milk.getnumber() / 2))
+					{
+						max4 = small3;
+					}
+					else {
+						max4 = (milk.getnumber() / 2);
+					}
+					cout << "How many would you like to buy? max:" << max4 << endl << endl;
+					int many24;
+					cin >> many24;
+					if (many24 <= max4) {
+						water.decrease(many24);
+						chco.decrease(many24);
+						milk.decrease(2 * many24);
+						return (many24 * 3000);
+					}
+					else {
+						cout << "Sorry I don't have enough foodstuff." << endl << endl;
+					}
 				}
-				else {
-					max4 = (milk.getnumber() / 2);
-				}
-				cout << "How many would you like to buy? max:" << max4 << endl << endl;
-				int many24;
-				cin >> many24;
-				if (many24 <= max4) {
-					water.decrease(many24);
-					chco.decrease(many24);
-					milk.decrease(2 * many24);
-					return (many24 * 3000);
-				}
-				else {
-					cout << "Sorry I don't have enough foodstuff." << endl << endl;
-				}
-			}
 			}
 			else {
-			cout << "Sorry I don't have enough foodstuff." << endl << endl;
-			return -1;
+				cout << "Sorry I don't have enough foodstuff." << endl << endl;
+				return -1;
 			}
-			
+
 		case '5':
 			if (water.getnumber() >= 3 && lemon.getnumber() >= 1) {
-			cout << "lemon ice tea choice" << endl << endl;
-			while (1) {
-				int max5 = (water.getnumber() / 3) < (lemon.getnumber()) ? (water.getnumber() / 3) : lemon.getnumber();
-				cout << "How many would you like to buy? max:" << max5 << endl << endl;
-				int many25;
-				cin >> many25;
-				if (many25 <= max5) {
-					water.decrease(3*many25);
-					lemon.decrease(many25);
-					return (many25 * 3000);
+				cout << "lemon ice tea choice" << endl << endl;
+				while (1) {
+					int max5 = (water.getnumber() / 3) < (lemon.getnumber()) ? (water.getnumber() / 3) : lemon.getnumber();
+					cout << "How many would you like to buy? max:" << max5 << endl << endl;
+					int many25;
+					cin >> many25;
+					if (many25 <= max5) {
+						water.decrease(3 * many25);
+						lemon.decrease(many25);
+						return (many25 * 3000);
+					}
+					else {
+						cout << "Sorry I don't have enough foodstuff." << endl << endl;
+					}
 				}
-				else {
-					cout << "Sorry I don't have enough foodstuff." << endl << endl;
-				}
-			}
 			}
 			else {
-			cout << "Sorry I don't have enough foodstuff." << endl << endl;
-			return -1;
+				cout << "Sorry I don't have enough foodstuff." << endl << endl;
+				return -1;
 			}
 		case '6':
 			if (water.getnumber() >= 3 && peach.getnumber() >= 1) {
@@ -228,9 +235,9 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 
 		default:
 			cout << "try again" << endl << endl;
-			
-			max[0]= (water.getnumber() / 3) < (coffee_bean.getnumber()) ? (water.getnumber() / 3) : coffee_bean.getnumber();
-			max[1]= (water.getnumber()) < (coffee_bean.getnumber()) ? water.getnumber() : coffee_bean.getnumber();
+
+			max[0] = (water.getnumber() / 3) < (coffee_bean.getnumber()) ? (water.getnumber() / 3) : coffee_bean.getnumber();
+			max[1] = (water.getnumber()) < (coffee_bean.getnumber()) ? water.getnumber() : coffee_bean.getnumber();
 			int temp1 = caramel.getnumber() < coffee_bean.getnumber() ? caramel.getnumber() : coffee_bean.getnumber();
 			int temp2 = water.getnumber() < (milk.getnumber() / 2) ? water.getnumber() : (milk.getnumber() / 2);
 			max[2] = temp1 < temp2 ? temp1 : temp2;
@@ -242,29 +249,29 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 			else {
 				max[3] = (milk.getnumber() / 2);
 			}
-			max[4]= (water.getnumber() / 3) < (lemon.getnumber()) ? (water.getnumber() / 3) : lemon.getnumber();
-			max[5]= (water.getnumber() / 3) < (lemon.getnumber()) ? (water.getnumber() / 3) : peach.getnumber();
-			int maxnumber=0;
+			max[4] = (water.getnumber() / 3) < (lemon.getnumber()) ? (water.getnumber() / 3) : lemon.getnumber();
+			max[5] = (water.getnumber() / 3) < (lemon.getnumber()) ? (water.getnumber() / 3) : peach.getnumber();
+			int maxnumber = 0;
 			int maxmum = 0;
-			for (int maxi = 0; maxi< 6; maxi++) {
+			for (int maxi = 0; maxi < 6; maxi++) {
 				if (maxmum < max[maxi]) {
 					maxmum = max[maxi];
 					maxnumber = maxi + 1;
 				}
 			}
-			if (maxnumber==1) {
+			if (maxnumber == 1) {
 				while (1) {
 					cout << "1.Hot? 2.Cool?" << endl;
 					int ch271;
 					cin >> ch271;
 					if (ch271 == 1) {
-						cout << "Hot American choice" << endl << endl;
+						cout << "Hot Americano choice" << endl << endl;
 						water.decrease(3);
 						coffee_bean.decrease(1);
 						return 2000;
 					}
 					else if (ch271 == 2) {
-						cout << "Cool American choice" << endl << endl;
+						cout << "Cool Americano choice" << endl << endl;
 						return 2000;
 					}
 					else {
@@ -273,7 +280,8 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 					}
 
 				}
-			}else if (maxnumber == 2) {
+			}
+			else if (maxnumber == 2) {
 				cout << "1.Hot? 2.Cool?" << endl;
 				int ch272;
 				cin >> ch272;
@@ -292,7 +300,8 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 
 				}
 
-			}else if (maxnumber == 3) {
+			}
+			else if (maxnumber == 3) {
 				while (1) {
 					cout << "1.Hot? 2.Cool?" << endl;
 					int ch273;
@@ -320,21 +329,24 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 
 				}
 
-			}else if (maxnumber == 4) {
+			}
+			else if (maxnumber == 4) {
 				cout << "Hot chocolate choice" << endl << endl;
-					water.decrease(1);
-					chco.decrease(1);
-					milk.decrease(2);
-					return 2000;
+				water.decrease(1);
+				chco.decrease(1);
+				milk.decrease(2);
+				return 2000;
 
 
-			}else if (maxnumber == 5) {
+			}
+			else if (maxnumber == 5) {
 				cout << "lemon ice tea choice" << endl << endl;
 				water.decrease(3);
 				lemon.decrease(1);
 				return 2000;
 
-			}else if (maxnumber == 6) {
+			}
+			else if (maxnumber == 6) {
 				cout << "peach ice tea choice" << endl << endl;
 				water.decrease(3);
 				peach.decrease(1);
@@ -349,11 +361,11 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 
 
 
-			
-			
+
+
 
 		}
-		
+
 	}
 }
 int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly, foodstuff &ShivaCans) {
@@ -367,15 +379,15 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 		cin >> coffech;
 		switch (coffech) {
 		case '1':
-			if (Chaotour.getnumber() >= 1 ) {
-				
+			if (Chaotour.getnumber() >= 1) {
+
 				while (1) {
-					
+
 					cout << "How many would you like to buy? max:" << Chaotour.getnumber() << endl << endl;
 					int many31;
 					cin >> many31;
 					if (many31 <= Chaotour.getnumber()) {
-						
+
 						return (many31 * 1500);
 					}
 					else {
@@ -402,11 +414,21 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 					}
 					else {
 						cout << "Sorry I don't have enough foodstuff." << endl << endl;
+						cin.clear();
+						cin.ignore(100, '\n');
+						cin >> enter;
+
+						system("cls");
 					}
 				}
 			}
 			else {
 				cout << "Sorry I don't have enough foodstuff." << endl << endl;
+				cin.clear();
+				cin.ignore(100, '\n');
+				cin >> enter;
+
+				system("cls");
 				return -1;
 			}
 		case '3':
@@ -423,11 +445,21 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 					}
 					else {
 						cout << "Sorry I don't have enough foodstuff." << endl << endl;
+						cin.clear();
+						cin.ignore(100, '\n');
+						cin >> enter;
+
+						system("cls");
 					}
 				}
 			}
 			else {
 				cout << "Sorry I don't have enough foodstuff." << endl << endl;
+				cin.clear();
+				cin.ignore(100, '\n');
+				cin >> enter;
+
+				system("cls");
 				return -1;
 			}
 		case '4':
@@ -444,21 +476,31 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 					}
 					else {
 						cout << "Sorry I don't have enough foodstuff." << endl << endl;
+						cin.clear();
+						cin.ignore(100, '\n');
+						cin >> enter;
+
+						system("cls");
 					}
 				}
 			}
 			else {
 				cout << "Sorry I don't have enough foodstuff." << endl << endl;
+				cin.clear();
+				cin.ignore(100, '\n');
+				cin >> enter;
+
+				system("cls");
 				return -1;
 			}
 		default:
 			cout << "try again" << endl << endl;
 		}
-		
+
 
 
 	}
-	
+
 }
 bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_bean, foodstuff&caramel, foodstuff&milk, foodstuff&lemon, foodstuff&chco, foodstuff&peach, foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly, foodstuff &ShivaCans) {
 	bool lp2 = true;
@@ -466,35 +508,39 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 	char a = 0;
 	int pass;
 	while (lp2) {
-		cout << endl << endl << endl << endl << endl << endl << endl << endl << endl;
-		cout << "Hellow, welcome to cat cafe." << endl << "Please select one of the following numbers." << endl;
-		cout << "1.Admission Fees " << endl << "2.coffee" << endl << "3.cat item" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << "*. manager mode";
+
+		cout << "---------------------Hellow, welcome to cat cafe.----------------------" << endl << "--------------Please select one of the following numbers.--------------" << endl;
+		cout << "1.Admission Fees " << endl << "2.coffee" << endl << "3.cat item" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << "                                                        *. manager mode" << endl;
 		cin >> a;
+		system("cls");
 		switch (a) {
 		case '1':
-				sum += admission_fee();
+			sum += admission_fee();
 
-				while (1) {
-					cout << "Are you going to buy something else?" << endl;
-					cout << "1.Yes 2.No" << endl << endl;
+			while (1) {
+				cout << "Are you going to buy something else?" << endl;
+				cout << "1.Yes 2.No" << endl << endl;
 
-					int num1;
-					cin >> num1;
-					if (num1 == 1) {
-						break;
+				int num1;
+				cin >> num1;
+				if (num1 == 1) {
+					system("cls");
+					break;
 
-					}
-					else if (num1 == 2) {
-						lp2 = false;
-						break;
-
-					}
-					else {
-						cout << "try again" << endl << endl;
-					}
 				}
-				
-			
+				else if (num1 == 2) {
+					system("cls");
+					lp2 = false;
+					break;
+
+				}
+				else {
+					cout << "try again" << endl << endl;
+
+				}
+			}
+
+
 			break;
 		case '2':
 			int checkcoffee;
@@ -509,16 +555,22 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 					int num1;
 					cin >> num1;
 					if (num1 == 1) {
+
+
+						system("cls");
 						break;
 
 					}
 					else if (num1 == 2) {
+
+						system("cls");
 						lp2 = false;
 						break;
 
 					}
 					else {
 						cout << "try again" << endl << endl;
+
 					}
 				}
 			}
@@ -536,16 +588,22 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 					int num1;
 					cin >> num1;
 					if (num1 == 1) {
+
+						system("cls");
 						break;
 
 					}
 					else if (num1 == 2) {
+
+						system("cls");
 						lp2 = false;
 						break;
 
 					}
 					else {
 						cout << "try again" << endl << endl;
+
+
 					}
 				}
 			}
@@ -555,24 +613,51 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 			cout << "press your password!";
 			cin >> pass;
 			if (c == pass) {
+				system("cls");
 				return false;
 			}
 			else {
+
 				cout << "Incorrect password.";
+				cin.clear();
+				cin.ignore(100, '\n');
+				cin >> enter;
+
+				system("cls");
 			}
 			break;
 
 
 		default:
 			cout << "Please re-enter";
+			cin.clear();
+			cin.ignore(100, '\n');
+			cin >> enter;
+
+			system("cls");
+
 		}
 
 
 	}
 	cout << "Would you like to pay?" << sum << endl << endl;
 	money.increase(sum);
-	
+	cin.clear();
+	cin.ignore(100, '\n');
+	cin >> enter;
+	if (enter == "no") {
+		cout << "Return to the initialization plane.";
+		return true;
+	}
+	else {
+		system("cls");
+	}
 	cout << "thank you" << endl << endl << endl << endl << endl;
+	cin.clear();
+	cin.ignore(100, '\n');
+	cin >> enter;
+
+	system("cls");
 
 	return true;
 }
