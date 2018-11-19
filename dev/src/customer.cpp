@@ -232,7 +232,6 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 				return -1;
 			}
 		case '7':
-
 			max[0] = (water.getnumber() / 3) < (coffee_bean.getnumber()) ? (water.getnumber() / 3) : coffee_bean.getnumber();
 			max[1] = (water.getnumber()) < (coffee_bean.getnumber()) ? water.getnumber() : coffee_bean.getnumber();
 			int temp1 = caramel.getnumber() < coffee_bean.getnumber() ? caramel.getnumber() : coffee_bean.getnumber();
@@ -355,11 +354,6 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 			}
 
 		
-
-
-		default:
-			cout << "try again" << endl << endl;
-			break;
 
 
 		}
