@@ -1,7 +1,7 @@
 #pragma once
 #ifndef FOODSTUFF_H
 #define FOODSTUFF_H
-#include "item.h"
+#include "./item.h"
 class foodstuff : public item {
 	int pay;
 public:
