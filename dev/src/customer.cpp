@@ -354,12 +354,12 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 				return -1;
 			}
 
-			default:
-				cout << "try again" << endl << endl;
+		
 
 
-
-
+		default:
+			cout << "try again" << endl << endl;
+			break;
 
 
 		}
