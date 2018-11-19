@@ -385,7 +385,7 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 					int many31;
 					cin >> many31;
 					if (many31 <= Chaotour.getnumber()) {
-
+						Chaotour.decrease(many31);
 						return (many31 * 1500);
 					}
 					else {
@@ -407,8 +407,8 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 					int many32;
 					cin >> many32;
 					if (many32 <= Catstick.getnumber()) {
-
-						return (many32 * 1500);
+						Catstick.decrease(many32);
+							return (many32 * 1500);
 					}
 					else {
 						cout << "Sorry I don't have enough foodstuff." << endl << endl;
@@ -436,10 +436,10 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 
 					cout << "How many would you like to buy? max:" << GreeniesPhilly.getnumber() << endl << endl;
 					int many32;
-					cin >> many32;
-					if (many32 <= GreeniesPhilly.getnumber()) {
-
-						return (many32 * 5000);
+					cin >> many33;
+					if (many33 <= GreeniesPhilly.getnumber()) {
+						GreeniesPhilly.decrease(many33);
+						return (many33 * 5000);
 					}
 					else {
 						cout << "Sorry I don't have enough foodstuff." << endl << endl;
@@ -466,11 +466,11 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 				while (1) {
 
 					cout << "How many would you like to buy? max:" << ShivaCans.getnumber() << endl << endl;
-					int many32;
-					cin >> many32;
-					if (many32 <= ShivaCans.getnumber()) {
-
-						return (many32 * 2000);
+					int many34;
+					cin >> many34;
+					if (many34 <= ShivaCans.getnumber()) {
+						ShivaCans.decrease(many34);
+						return (many34 * 2000);
 					}
 					else {
 						cout << "Sorry I don't have enough foodstuff." << endl << endl;
