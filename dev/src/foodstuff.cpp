@@ -1,4 +1,4 @@
-#include "foodstuff.h"
+#include "../inc/foodstuff.h"
 
 foodstuff::foodstuff(int a, int b) {
 	pay = a;

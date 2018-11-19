@@ -1,4 +1,4 @@
-#include "item.h"
+#include "../inc/item.h"
 #include <iostream>
 using namespace std;
 void item::set(int a) {

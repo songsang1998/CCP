@@ -1,8 +1,8 @@
-#include "manager.h"
+#include "../inc/manager.h"
 #include <iostream>
 #include <string>
 #include <queue>
-#include "cat.h"
+#include "../inc/cat.h"
 #include <ctime>
 using namespace std;
 queue<Cat>Q;

@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 #include <ctime>
-#include "manager.h"
-#include "customer.h"
-#include "cat.h"
-#include "foodstuff.h"
-#include "item.h"
+#include "../inc/manager.h"
+#include "../inc/customer.h"
+#include "../inc/cat.h"
+#include "../inc/foodstuff.h"
+#include "../inc/item.h"
 
 
 

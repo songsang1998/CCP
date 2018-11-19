@@ -1,4 +1,4 @@
-#include "customer.h"
+#include "../inc/customer.h"
 #include <stdlib.h>
 
 string enter;
