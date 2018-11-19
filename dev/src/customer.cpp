@@ -435,7 +435,7 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 				while (1) {
 
 					cout << "How many would you like to buy? max:" << GreeniesPhilly.getnumber() << endl << endl;
-					int many32;
+					int many33;
 					cin >> many33;
 					if (many33 <= GreeniesPhilly.getnumber()) {
 						GreeniesPhilly.decrease(many33);
