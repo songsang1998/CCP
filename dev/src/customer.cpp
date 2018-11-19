@@ -268,6 +268,8 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 					}
 					else if (ch271 == 2) {
 						cout << "Cool Americano choice" << endl << endl;
+						water.decrease(3);
+						coffee_bean.decrease(1);
 						return 2000;
 					}
 					else {
@@ -278,22 +280,26 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 				}
 			}
 			else if (maxnumber == 2) {
-				cout << "1.Hot? 2.Cool?" << endl;
-				int ch272;
-				cin >> ch272;
-				if (ch272 == 1) {
-					cout << "Hot Espresso choice" << endl << endl;
-					water.decrease(1);
-					coffee_bean.decrease(1);
-					return 2000;
-				}
-				else if (ch272 == 2) {
-					cout << "Cool Espresso choice" << endl << endl;
-					return 2000;
-				}
-				else {
-					cout << "try again" << endl << endl;
+				while (1) {
+					cout << "1.Hot? 2.Cool?" << endl;
+					int ch272;
+					cin >> ch272;
+					if (ch272 == 1) {
+						cout << "Hot Espresso choice" << endl << endl;
+						water.decrease(1);
+						coffee_bean.decrease(1);
+						return 2000;
+					}
+					else if (ch272 == 2) {
+						cout << "Cool Espresso choice" << endl << endl;
+						water.decrease(1);
+						coffee_bean.decrease(1);
+						return 2000;
+					}
+					else {
+						cout << "try again" << endl << endl;
 
+					}
 				}
 
 			}
