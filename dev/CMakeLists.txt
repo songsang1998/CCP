@@ -1,1 +1,1 @@
-ADD_EXECUTABLE(app.out src/main.cpp src/customer.cpp src/foodstuff.cpp src/item.cpp src/manager.cpp src/cat.cpp inc/cat.h inc/customer.h inc/foodstuff.h inc/item.h inc/manager )
+ADD_EXECUTABLE(app.out src/main.cpp src/customer.cpp src/foodstuff.cpp src/item.cpp src/manager.cpp src/cat.cpp inc/cat.h inc/customer.h inc/foodstuff.h inc/item.h inc/manager.h )
