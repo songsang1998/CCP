@@ -23,7 +23,7 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 		int max[6];
 		char coffech;
 		cin >> coffech;
-		system("cls");
+		system("clear");
 		switch (coffech) {
 		case '1':
 			if (water.getnumber() >= 3 && coffee_bean.getnumber() >= 1) {
@@ -418,7 +418,7 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 						cin.ignore(100, '\n');
 						cin >> enter;
 
-						system("cls");
+						system("clear");
 					}
 				}
 			}
@@ -428,7 +428,7 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 				cin.ignore(100, '\n');
 				cin >> enter;
 
-				system("cls");
+				system("clear");
 				return -1;
 			}
 		case '3':
@@ -449,7 +449,7 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 						cin.ignore(100, '\n');
 						cin >> enter;
 
-						system("cls");
+						system("clear");
 					}
 				}
 			}
@@ -459,7 +459,7 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 				cin.ignore(100, '\n');
 				cin >> enter;
 
-				system("cls");
+				system("clear");
 				return -1;
 			}
 		case '4':
@@ -480,7 +480,7 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 						cin.ignore(100, '\n');
 						cin >> enter;
 
-						system("cls");
+						system("clear");
 					}
 				}
 			}
@@ -490,7 +490,7 @@ int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly,
 				cin.ignore(100, '\n');
 				cin >> enter;
 
-				system("cls");
+				system("clear");
 				return -1;
 			}
 		default:
@@ -512,7 +512,7 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 		cout << "---------------------Hellow, welcome to cat cafe.----------------------" << endl << "--------------Please select one of the following numbers.--------------" << endl;
 		cout << "1.Admission Fees " << endl << "2.coffee" << endl << "3.cat item" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << "                                                        *. manager mode" << endl;
 		cin >> a;
-		system("cls");
+		system("clear");
 		switch (a) {
 		case '1':
 			sum += admission_fee();
@@ -524,12 +524,12 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 				int num1;
 				cin >> num1;
 				if (num1 == 1) {
-					system("cls");
+					system("clear");
 					break;
 
 				}
 				else if (num1 == 2) {
-					system("cls");
+					system("clear");
 					lp2 = false;
 					break;
 
@@ -557,13 +557,13 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 					if (num1 == 1) {
 
 
-						system("cls");
+						system("clear");
 						break;
 
 					}
 					else if (num1 == 2) {
 
-						system("cls");
+						system("clear");
 						lp2 = false;
 						break;
 
@@ -589,13 +589,13 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 					cin >> num1;
 					if (num1 == 1) {
 
-						system("cls");
+						system("clear");
 						break;
 
 					}
 					else if (num1 == 2) {
 
-						system("cls");
+						system("clear");
 						lp2 = false;
 						break;
 
@@ -613,7 +613,7 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 			cout << "press your password!";
 			cin >> pass;
 			if (c == pass) {
-				system("cls");
+				system("clear");
 				return false;
 			}
 			else {
@@ -623,7 +623,7 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 				cin.ignore(100, '\n');
 				cin >> enter;
 
-				system("cls");
+				system("clear");
 			}
 			break;
 
@@ -634,7 +634,7 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 			cin.ignore(100, '\n');
 			cin >> enter;
 
-			system("cls");
+			system("clear");
 
 		}
 
@@ -650,14 +650,14 @@ bool customer_Interface(int c, item &money, foodstuff &water, foodstuff&coffee_b
 		return true;
 	}
 	else {
-		system("cls");
+		system("clear");
 	}
 	cout << "thank you" << endl << endl << endl << endl << endl;
 	cin.clear();
 	cin.ignore(100, '\n');
 	cin >> enter;
 
-	system("cls");
+	system("clear");
 
 	return true;
 }
