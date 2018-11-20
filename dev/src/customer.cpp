@@ -13,7 +13,7 @@ int admission_fee() {
 int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuff&milk, foodstuff&lemon, foodstuff&chco, foodstuff&peach) {
 	while (1) {
 		cout << "--------------meun--------------" << endl;
-		cout << "1. American 3500 " << endl;
+		cout << "1. Americanio 3500 " << endl;
 		cout << "2. Espresso 3500 " << endl;
 		cout << "3. caramel macchiato 4000" << endl;
 		cout << "4. Hot chocolate 3000" << endl;
