@@ -12,7 +12,7 @@ int admission_fee() {
 
 int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuff&milk, foodstuff&lemon, foodstuff&chco, foodstuff&peach) {
 	while (1) {
-		cout << "--------------meun--------------" << endl;
+		cout << "--------------menu--------------" << endl;
 		cout << "1. Americano 3500 " << endl;
 		cout << "2. Espresso 3500 " << endl;
 		cout << "3. caramel macchiato 4000" << endl;
@@ -368,7 +368,7 @@ int coffee(foodstuff &water, foodstuff &coffee_bean, foodstuff&caramel, foodstuf
 }
 int catfood(foodstuff &Chaotour, foodstuff &Catstick, foodstuff &GreeniesPhilly, foodstuff &ShivaCans) {
 	while (1) {
-		cout << "--------------meun--------------" << endl;
+		cout << "--------------menu--------------" << endl;
 		cout << "1. Chaotour 1500 " << endl;
 		cout << "2. Catstick 2000 " << endl;
 		cout << "3. GreeniesPhilly 5000" << endl;
